@@ -26,48 +26,90 @@ public class MainProgram {
         if (studentID == 11530)
             System.out.println("No. It is the professor ID.\n");
         else if (studentID == 1515754){
-       	    System.out.println("[Student ID: "+studentID+"]");
+            System.out.println("[Student ID: "+studentID+"]");
             hw2_1515754();
-	}
-	else {
+        }
+        else if (studentID == 1612967){
+            System.out.println("[Student ID: "+studentID+"]");
+            hw2_1612967();
+        }
+        else {
             System.out.println("To be developed...\n");
-	}
+        }
     }
     public void hw2_1515754() {
-    	Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-    	System.out.println("1. Calculate min of two integer");
+        System.out.println("1. Calculate min of two integer");
         System.out.println("2. Calculate max of two integer");
 
         System.out.print("Enter menu number: ");
         int menu = scan.nextInt();
         int a,b;
         if (menu == 1) {
-        	System.out.println("Enter first number");
-        	a = scan.nextInt();
-        	System.out.println("Enter second number");
-        	b = scan.nextInt();
-        	System.out.println("MIN: " +min(a,b));
+            System.out.println("Enter first number");
+            a = scan.nextInt();
+            System.out.println("Enter second number");
+            b = scan.nextInt();
+            System.out.println("MIN: " +min(a,b));
         }
         else if (menu == 2) {
-        	System.out.println("Enter first number");
-        	a = scan.nextInt();
-        	System.out.println("Enter second number");
-        	b = scan.nextInt();
-        	System.out.println("Max: " +max(a,b));
+            System.out.println("Enter first number");
+            a = scan.nextInt();
+            System.out.println("Enter second number");
+            b = scan.nextInt();
+            System.out.println("Max: " +max(a,b));
         }
     }
 
     public int min(int a, int b) {
-    	int min;
-    	if (a>b) min = b;
-    	else min = a;
-    	return min;
+        int min;
+        if (a>b) min = b;
+        else min = a;
+        return min;
     }
     public int max(int a, int b) {
-    	int max;
-    	if (a>b) max = a;
-    	else max = b;
-    	return max;
+        int max;
+        if (a>b) max = a;
+        else max = b;
+        return max;
+    }
+
+    public void hw2_1612967() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("1. Calculate factorial of integer x");
+        System.out.println("2. Calculate absolute value of integer x");
+
+        System.out.print("Enter menu number: ");
+        int menu = scan.nextInt();
+        int a;
+        if (menu == 1) {
+            System.out.println("Enter integer x");
+            a = scan.nextInt();
+            System.out.println( a+"! = " + factorial(a));
+        }
+        else if (menu == 2) {
+            System.out.println("Enter integer x");
+            a = scan.nextInt();
+            System.out.println( "|"+a+"| = " + abs(a));
+        }
+    }
+
+    public int factorial(int a) {
+        if (a<=1){
+            return a;
+        }
+        else{
+            return factorial(a-1)*a;
+        }
+    }
+    public int abs(int a) {
+        if(a < 0){
+            return -a;
+        }
+        else{
+            return a;
+        }
     }
 }
