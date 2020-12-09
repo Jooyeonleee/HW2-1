@@ -85,12 +85,12 @@ public class MainProgram {
         int menu = scan.nextInt();
         int a;
         if (menu == 1) {
-            System.out.println("Enter integer x");
+            System.out.print("Enter integer x: ");
             a = scan.nextInt();
             System.out.println( a+"! = " + factorial(a));
         }
         else if (menu == 2) {
-            System.out.println("Enter integer x");
+            System.out.print("Enter integer x: ");
             a = scan.nextInt();
             System.out.println( "|"+a+"| = " + abs(a));
         }
