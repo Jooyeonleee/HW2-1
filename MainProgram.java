@@ -157,4 +157,40 @@ public class MainProgram {
         }
         return num;
     }
+
+    public void hw2_1610193() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("1. Calculate square of integer x");
+        System.out.println("2. Calculate 10^x (x is positive)");
+
+        System.out.print("Enter menu number: ");
+        int menu = scan.nextInt();
+        int a;
+        if (menu == 1) {
+            System.out.println("Enter integer number x");
+            a = scan.nextInt();
+            System.out.println("Square Output is: " + squareGY(a));
+        }
+        else if (menu == 2) {
+            System.out.println("Enter integer number x (x is positive)");
+            a = scan.nextInt();
+            System.out.println("10^a is: " + ten_oponentGY(a));
+        }
+    }
+    public int squareGY(int a) {
+        int square;       
+        square = a*a;
+        return square;
+    }
+    public int ten_oponentGY(int opnt) {
+        int output = 1;
+        if (opnt == 0) {
+        	return 1;
+        }
+        for( ;opnt >= 1; opnt-- ){
+        	output = output * 10;
+        }
+        return output;
+    }
 }
