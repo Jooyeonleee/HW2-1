@@ -179,7 +179,7 @@ public class MainProgram {
         else if (menu == 2) {
             System.out.println("Enter integer number x (x is positive)");
             a = scan.nextInt();
-            System.out.println("10^a is: " + ten_oponentGY(a));
+            System.out.println("10^x is: " + ten_oponentGY(a));
         }
     }
     public int squareGY(int a) {
