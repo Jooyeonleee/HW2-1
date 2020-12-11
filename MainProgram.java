@@ -162,7 +162,7 @@ public class MainProgram {
         return num;
     }
 
-    public void hw2_1610193() {
+public void hw2_1610193() {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("1. Calculate square of integer x");
@@ -171,15 +171,32 @@ public class MainProgram {
         System.out.print("Enter menu number: ");
         int menu = scan.nextInt();
         int a;
+        
         if (menu == 1) {
             System.out.println("Enter integer number x");
-            a = scan.nextInt();
-            System.out.println("Square Output is: " + squareGY(a));
+            try {
+            	a = scan.nextInt();
+                System.out.println("Square Output is: " + squareGY(a));
+            }catch(Exception e){
+            	System.out.println("Please Enter INTEGER next time!");
+            }
         }
         else if (menu == 2) {
-            System.out.println("Enter integer number x (x is positive)");
-            a = scan.nextInt();
-            System.out.println("10^x is: " + ten_oponentGY(a));
+            System.out.println("Enter integer number x (x >= 0)");
+            try {
+            	a = scan.nextInt();
+            	if(a>=0) {
+            		System.out.println("10^" + a + " is: " + ten_oponentGY(a)); 
+            	}
+            	else {
+                	System.out.println("Please Enter 0 or POSITIVE INTEGER next time!");
+            	}
+            } catch(Exception e){
+            	System.out.println("Please Enter 0 or POSITIVE INTEGER next time!");
+            }
+        }
+        else {
+        	System.out.println("MENU ONLY 1 OR 2!!");
         }
     }
     public int squareGY(int a) {
