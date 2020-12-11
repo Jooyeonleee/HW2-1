@@ -86,7 +86,7 @@ public class MainProgram {
     public void hw2_1612967() {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("1. Calculate factorial of integer x");
+        System.out.println("1. Calculate factorial of positive integer x");
         System.out.println("2. Calculate absolute value of integer x");
 
         System.out.print("Enter menu number: ");
@@ -95,18 +95,24 @@ public class MainProgram {
         if (menu == 1) {
             System.out.print("Enter integer x: ");
             a = scan.nextInt();
-            System.out.println( a+"! = " + factorial(a));
+            if (a<0) {
+                System.out.println("Enter Positive integer.");
+            }
+            else {
+                System.out.println(a + "! = " + factorial(a));
+            }
         }
         else if (menu == 2) {
             System.out.print("Enter integer x: ");
             a = scan.nextInt();
-            System.out.println( "|"+a+"| = " + abs(a));
+            System.out.println("|" + a + "| = " + abs(a));
+
         }
     }
 
     public int factorial(int a) {
         if (a<=1){
-            return a;
+            return 1;
         }
         else{
             return factorial(a-1)*a;
