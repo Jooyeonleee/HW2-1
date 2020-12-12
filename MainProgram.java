@@ -94,19 +94,29 @@ public class MainProgram {
         int a;
         if (menu == 1) {
             System.out.print("Enter integer x: ");
-            a = scan.nextInt();
-            if (a<0) {
+            try {
+                a = scan.nextInt();
+                if (a < 0) {
+                    System.out.println("Enter Positive integer.");
+                } else {
+                    System.out.println(a + "! = " + factorial(a));
+                }
+            } catch (Exception e){
                 System.out.println("Enter Positive integer.");
             }
-            else {
-                System.out.println(a + "! = " + factorial(a));
-            }
         }
+
         else if (menu == 2) {
             System.out.print("Enter integer x: ");
-            a = scan.nextInt();
-            System.out.println("|" + a + "| = " + abs(a));
-
+            try{
+                a = scan.nextInt();
+                System.out.println("|" + a + "| = " + abs(a));
+            } catch (Exception e){
+                System.out.println("Enter integer.");
+            }
+        }
+        else{
+            System.out.println("Please Enter Menu 1 or 2");
         }
     }
 
