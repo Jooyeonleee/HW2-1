@@ -41,6 +41,10 @@ public class MainProgram {
             System.out.println("[Student ID: "+studentID+"]");
             hw2_1610193();
         }
+	else if (studentID == 1613339) {
+		System.out.println("[Student ID: " +studentID + "]");
+		hw2_1613339();
+	}
         else {
             System.out.println("To be developed...\n");
         }
@@ -229,5 +233,55 @@ public void hw2_1610193() {
         	output = output * 10;
         }
         return output;
+    }
+
+    public void hw2_1613339() {
+	    Scanner scan = new Scanner(System.in);
+
+	    int menu;
+	    int number;
+
+	    System.out.println("1. Calculate square of integer x");
+	    System.out.println("2. Calculate absolute value of integer x");
+	    System.out.print("Enter menu number: ");
+
+	    menu = san.nextInt();
+
+	    if (menu == 1) {
+		    number = getNumber();
+		    System.out.println("Square of " + number + " is  " + yunjoe_square(number));
+	    }
+
+	    else if (menu == 2) {
+		    number = getNumber();
+		    System.out.println("|" + number + "| = " + yunjoe_abs(number));
+	    }
+
+	    else {
+		    System.out.println("Please enter Menu 1 or 2.");
+	    }
+    }
+
+    public int getNumber() {
+	    Scanner scan = new Scanner(System.in);
+	    int number;
+
+	    System.out.print("Enter integer number: ");
+	    number = scan.nextInt();
+	    return number;
+    }
+
+    public int yunjoe_square(int number) {
+	    number *= number;
+	    return number;
+    }
+
+    public int yunjoe_abs(int number) {
+	    if (number < 0) {
+		    return -number;
+	    }
+	    else {
+		    return number;
+	    }
     }
 }
