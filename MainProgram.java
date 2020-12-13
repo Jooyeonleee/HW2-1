@@ -245,7 +245,7 @@ public void hw2_1610193() {
 	    System.out.println("2. Calculate absolute value of integer x");
 	    System.out.print("Enter menu number: ");
 
-	    menu = san.nextInt();
+	    menu = scan.nextInt();
 
 	    if (menu == 1) {
 		    number = getNumber();
