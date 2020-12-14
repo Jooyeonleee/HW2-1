@@ -45,6 +45,10 @@ public class MainProgram {
 		System.out.println("[Student ID: " + studentID + "]");
 		hw2_1613339();
 	}
+	else if (studentID == 1614378) {
+		System.out.println("[Student ID: " + studentID + "]");
+		hw2_1614378();
+	}
         else {
             System.out.println("To be developed...\n");
         }
@@ -284,4 +288,62 @@ public void hw2_1610193() {
 		    return number;
 	    }
     }
+	public void hw2_1614378() {
+		int n = 0;
+		int[] num;
+		printMenuJ();
+		switch(input.nextInt()) {
+		case 1:
+			n = getNumberJ();
+			num = new int[n];
+			num = getArrayJ(n, num);
+			FindMinimumJ(n, num);
+			break;
+		case 2:
+			n = getNumberJ();
+			num = new int[n];
+			num = getArrayJ(n, num);
+			FindMaximumJ(n, num);
+			break;
+		}
+	}
+
+	public void printMenuJ() {
+		System.out.println("1. Find Minimum number");
+		System.out.println("2. Find Maximum number");
+		System.out.print("Enter menu number: ");
+	}
+
+	public int getNumberJ() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("number of numbers: ");
+		int n = input.nextInt();
+		return n;
+	}
+	
+	public int[] getArrayJ(int n, int[] num) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter numbers: ");
+		for(int i = 0; i<n; i++) {
+			num[i] = input.nextInt();
+		}
+		return num;
+	}
+
+	public void FindMinimumJ(int n, int[] num) {
+		int min = num[0];
+		for(int i = 1; i < n; i++)
+			if(num[i] < min)
+				min = num[i];
+		System.out.println("Minimum number is " + min);
+	}
+
+	public void FindMaximumJ(int n, int[] num) {
+		int max = num[0];
+		for(int i = 1; i < n; i++)
+			if(num[i] > max)
+				max = num[i];
+		System.out.println("Maximum number is " + max);
+	}
 }
+
