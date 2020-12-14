@@ -330,20 +330,22 @@ public void hw2_1610193() {
 		return num;
 	}
 
-	public void FindMinimumJ(int n, int[] num) {
+	public int FindMinimumJ(int n, int[] num) {
 		int min = num[0];
 		for(int i = 1; i < n; i++)
 			if(num[i] < min)
 				min = num[i];
 		System.out.println("Minimum number is " + min);
+		return min;
 	}
 
-	public void FindMaximumJ(int n, int[] num) {
+	public int FindMaximumJ(int n, int[] num) {
 		int max = num[0];
 		for(int i = 1; i < n; i++)
 			if(num[i] > max)
 				max = num[i];
 		System.out.println("Maximum number is " + max);
+		return max;
 	}
 }
 
